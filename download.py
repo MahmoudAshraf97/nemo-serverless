@@ -3,7 +3,8 @@
 
 # In this example: A Huggingface BERT model
 
-from transformers import pipeline
+from nemo.collections.asr.models.classification_models import EncDecClassificationModel
+from nemo.collections.asr.models.label_models import EncDecSpeakerLabelModel
 pretrained_vad = 'vad_multilingual_marblenet'
 pretrained_speaker_model = 'titanet_large'
 def download_model():

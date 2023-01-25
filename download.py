@@ -4,10 +4,11 @@
 # In this example: A Huggingface BERT model
 
 from transformers import pipeline
-
+pretrained_vad = 'vad_multilingual_marblenet'
+pretrained_speaker_model = 'titanet_large'
 def download_model():
-    # do a dry run of loading the huggingface model, which will download weights
-    pipeline('fill-mask', model='bert-base-uncased')
+    EncDecClassificationModel.from_pretrained(model_name=pretrained_vad) #NeMo VAD
+    EncDecSpeakerLabelModel.from_pretrained(model_name=pretrained_speaker_model) #NeMo Embedding
 
 if __name__ == "__main__":
     download_model()
